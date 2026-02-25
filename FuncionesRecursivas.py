@@ -6,7 +6,12 @@ def convertir_a_binario(numero):
         return "1"
     else:
         return convertir_a_binario(numero // 2) + str(numero % 2)
-        
+
+def contar_digitos(numero):
+    if(numero <=0):
+        return 0
+    return contar_digitos(numero//10) + 1
+
 while True:
     print("1. Convertir a Binario")
     print("2. Contar Dígitos")
@@ -22,9 +27,8 @@ while True:
         print(convertir_a_binario(numero))
 
     elif op == "2":
-        n = input("Nombre: ")
-        a = input("Apellido: ")
-        c = input("Carnet: ")
+        numero = int(input("Numero: "))
+        print("Cantidad de dígitos:  "  + str(contar_digitos(numero)))
 
     elif op == "3":
         c = input("Carnet a eliminar: ")
