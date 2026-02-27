@@ -12,6 +12,13 @@ def contar_digitos(numero):
         return 0
     return contar_digitos(numero//10) + 1
 
+def raiz_cuadrada_entera(n):
+    def calcular_raiz_cuadrada(num, candidato): 
+        if candidato * candidato > num: 
+            return candidato - 1 
+        return calcular_raiz_cuadrada(num, candidato + 1) 
+    return calcular_raiz_cuadrada(n, 0)
+
 while True:
     print("1. Convertir a Binario")
     print("2. Contar Dígitos")
@@ -31,10 +38,12 @@ while True:
         print("Cantidad de dígitos:  "  + str(contar_digitos(numero)))
 
     elif op == "3":
-        c = input("Carnet a eliminar: ")
+        numero = int(input("Numero: "))
+        print("La raiz cuadrada entera es: " + str(raiz_cuadrada_entera(numero)))
 
     elif op == "4":
-        c = input("Carnet a eliminar: ")
+        numero = int(input("Numero: "))
+        print("Raiz ")
 
     elif op == "6":
         break
