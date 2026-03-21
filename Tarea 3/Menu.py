@@ -25,6 +25,21 @@ def menu():
                 print("Número encontrado.")
             else:
                 print("Número NO encontrado.")
+
+        elif opcion == "3":
+            num = int(input("Número a eliminar: "))
+            arbol.eliminar(num)
+
+        elif opcion == "4":
+            ruta = input("Ingrese ruta del archivo CSV: ")
+            arbol.cargar_csv(ruta)
+
+        elif opcion == "5":
+            arbol.graficar()
+
+        elif opcion == "6":
+            arbol.mostrar_binario()
+
         elif opcion == "7":
             print("Saliendo...")
             break
