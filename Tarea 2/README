@@ -1,0 +1,2 @@
+En esta tarea se presenta un menu interactivo con las 5 fucniones solicitadas siendo Convertir a Binario, Contar Dígitos, Raíz Cuadrada Entera, Convertir a Decimal desde Romano, Suma de Números Entero y Salir. 
+Su funcionamiento es inicialmente ingresando un numero el cual indique la funcion en la que se quiera probar, continuamente dependiendo de la funcion irá solicitando si un número o letras.
