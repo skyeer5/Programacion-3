@@ -22,3 +22,17 @@ class ABB:
             nodo.derecha = self._insertar(nodo.derecha, valor)
 
         return nodo
+    def buscar(self, valor):
+        return self._buscar(self.raiz, valor)
+
+    def _buscar(self, nodo, valor):
+        if nodo is None:
+            return False
+
+        if nodo.valor == valor:
+            return True
+
+        if valor < nodo.valor:
+            return self._buscar(nodo.izquierda, valor)
+        else:
+            return self._buscar(nodo.derecha, valor)
