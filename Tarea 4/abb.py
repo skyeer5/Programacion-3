@@ -36,3 +36,30 @@ class ABB:
             return self._buscar(nodo.izquierda, valor)
         else:
             return self._buscar(nodo.derecha, valor)
+    def eliminar(self, valor):
+        self.raiz = self._eliminar(self.raiz, valor)
+
+    def _eliminar(self, nodo, valor):
+        if nodo is None:
+            return nodo
+
+        if valor < nodo.valor:
+            nodo.izquierda = self._eliminar(nodo.izquierda, valor)
+        elif valor > nodo.valor:
+            nodo.derecha = self._eliminar(nodo.derecha, valor)
+        else:
+            if nodo.izquierda is None:
+                return nodo.derecha
+            elif nodo.derecha is None:
+                return nodo.izquierda
+
+            temp = self._minimo(nodo.derecha)
+            nodo.valor = temp.valor
+            nodo.derecha = self._eliminar(nodo.derecha, temp.valor)
+
+        return nodo
+
+    def _minimo(self, nodo):
+        while nodo.izquierda:
+            nodo = nodo.izquierda
+        return nodo
