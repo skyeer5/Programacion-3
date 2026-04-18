@@ -1,4 +1,5 @@
 from graphviz import Digraph
+import csv
 
 def graficar(arbol):
     dot = Digraph()
@@ -15,3 +16,10 @@ def graficar(arbol):
 
     recorrer(arbol.raiz)
     dot.render('arbol', view=True)
+
+def cargar_csv(ruta, arbol):
+    with open(ruta) as archivo:
+        reader = csv.reader(archivo)
+        for fila in reader:
+            for valor in fila:
+                arbol.insertar(int(valor))

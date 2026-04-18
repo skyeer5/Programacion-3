@@ -1,5 +1,5 @@
 from avl import AVL
-from utils import graficar
+from utils import graficar, cargar_csv
 
 def menu():
     arbol = AVL()
@@ -24,7 +24,8 @@ def menu():
             arbol.eliminar(int(input("Valor: ")))
 
         elif opcion == "4":
-            break
+            ruta = input("Ruta CSV: ")
+            cargar_csv(ruta, arbol)
 
         elif opcion == "5":
             graficar(arbol)

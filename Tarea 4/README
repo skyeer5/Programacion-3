@@ -1,0 +1,31 @@
+En este proyecto se desarrolló un programa en Python que permite trabajar con un Árbol AVL desde la línea de comandos.
+
+El sistema permite insertar, buscar y eliminar valores, manteniendo el árbol balanceado automáticamente.
+Además, se pueden cargar datos desde archivos CSV y visualizar el árbol usando Graphviz.
+
+Al ejecutar el programa aparece un menú con varias opciones:
+
+Insertar número
+Buscar número
+Eliminar número
+Cargar CSV
+Visualizar árbol
+
+Para probar rápido:
+
+Elegir la opción 4
+Escribir el nombre de uno de los archivos CSV incluidos
+
+Ejemplo:
+
+data1.csv
+
+Luego se puede visualizar el árbol con la opción 5.
+
+Se incluyen 3 archivos de prueba:
+
+data1.csv
+data2.csv
+data3.csv
+
+Estos archivos contienen números que se usan para llenar el árbol automáticamente.
