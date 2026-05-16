@@ -1,0 +1,45 @@
+# Proyecto Árbol B
+
+## Integrantes
+
+Nombre: José Daniel Pineda Vicente
+Carnet: 2779 24839 0101
+
+## Instalación
+
+Instalar Graphviz
+
+## Ejecución
+
+python main.py
+
+## Cargar CSV
+
+Seleccione opción 4.
+
+Ingrese:
+
+datos1.csv
+
+o
+
+datos2.csv
+
+El sistema cargará automáticamente los registros.
+
+## Generación gráfica
+
+Seleccionar opción 5.
+
+La imagen aparecerá en:
+
+salida/arbol.png
+
+## Funciones implementadas
+
+- Insertar
+- Buscar
+- Eliminar
+- Carga CSV
+- Configuración del grado
+- Representación gráfica con Graphviz
